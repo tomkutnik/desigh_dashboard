@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Social Dashboard]</title>
+
+  <link href="./scss/style.css" rel="stylesheet">
+  <link href="./scss/overlay.css" rel="stylesheet">
+
+  </link>
+</head>
+
+<body>
+  <div class="dashboard ch">
+    <div class="dashboard__header ch">
+      <div class="dashboard__name">
+        <h1 class="ch">Social Media Dashboard</h1>
+        <h2 class="ch">Total Followers: 23,004</h2>
+      </div>
+      <div class="dashboard__displaymode ch">
+        <h2 class="ch"> Dark Mode</h2>
+        <label class="switch">
+          <input id="colorSwitch" type="checkbox" onclick="colorChanger()">
+          <span class="slider round ch"></span>
+        </label>
+      </div>
+    </div>
+    <div class="dashboard__cards">
+      <div class="dashboard__card ch">
+        <div class="line dashboard__card-fb"></div>
+        <img src="./src/icon-facebook.svg">
+        <h4 class="ch">@nathanf</h4>
+        <h1>1987</h1>
+        <h2>Followers</h2>
+        <img src="./src/icon-up.svg">
+        <h3>12 Today</h3>
+      </div>
+      <div class="dashboard__card ch">
+        <div class="line dashboard__card-twitter"></div>
+        <img src="./src/icon-twitter.svg">
+        <h4 class="ch">@nathanf</h4>
+        <h1>1044</h1>
+        <h2>Followers</h2>
+        <img src="./src/icon-up.svg">
+        <h3>99 Today</h3>
+      </div>
+      <div class="dashboard__card ch">
+        <div class="line dashboard__card-insta"></div>
+        <img src="./src/icon-instagram.svg">
+        <h4 class="ch"> @realnathanf</h4>
+        <h1> 11k</h1>
+        <h2>Followers</h2>
+        <img src="./src/icon-up.svg">
+        <h3> 1099 Today</h3>
+      </div>
+      <div class="dashboard__card ch">
+        <div class="line dashboard__card-yt"></div>
+        <img src="./src/icon-youtube.svg">
+        <h4 class="ch"> Nathan F.</h4>
+        <h1> 8239</h1>
+        <h2> Subscribers</h2>
+        <img src="./src/icon-down.svg">
+        <h3 class="red"> 144 Today</h3>
+      </div>
+    </div>
+    <div class="dashboard__overview ch">
+      <h1>Overview - Today</h1>
+      <div class="dashboard__items">
+        <div class="dashboard__item ch">
+          <span class="name">Page Views</span>
+          <img class="image" src="./src/icon-facebook.svg">
+          <div class="lowerLine"><span class="number">87</span>
+            <span class="change change-green">3%</span> <img class="arrow" src="./src/icon-up.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Likes</span>
+          <img class="image" src="./src/icon-facebook.svg">
+          <div class="lowerLine"><span class="number">52</span>
+            <span class="change change-red">2%</span> <img class="arrow" src="./src/icon-down.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Likes</span>
+          <img class="image" src="./src/icon-instagram.svg">
+          <div class="lowerLine"><span class="number">5462</span>
+            <span class="change change-green">2257%</span> <img class="arrow" src="./src/icon-up.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Profile Views</span>
+          <img class="image" src="./src/icon-instagram.svg">
+          <div class="lowerLine"><span class="number">52k</span>
+            <span class="change change-green">1375%</span> <img class="arrow" src="./src/icon-up.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Retweets</span>
+          <img class="image" src="./src/icon-twitter.svg">
+          <div class="lowerLine"><span class="number">117</span>
+            <span class="change change-green">303%</span> <img class="arrow" src="./src/icon-up.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Likes</span>
+          <img class="image" src="./src/icon-twitter.svg">
+          <div class="lowerLine"><span class="number">507</span>
+            <span class="change change-green">553%</span> <img class="arrow" src="./src/icon-up.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Likes</span>
+          <img class="image" src="./src/icon-youtube.svg">
+          <div class="lowerLine"><span class="number">107</span>
+            <span class="change change-red">19%</span> <img class="arrow" src="./src/icon-down.svg">
+          </div>
+        </div>
+        <div class="dashboard__item ch">
+          <span class="name">Total Views</span>
+          <img class="image" src="./src/icon-youtube.svg">
+          <div class="lowerLine"><span class="number">1407</span>
+            <span class="change change-red">12%</span> <img class="arrow" src="./src/icon-down.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  </div>
+
+  <div>
+    <div id="mobile" class="showcase showcase-mobile">
+      <img src="./src/mobile-design.jpg">
+    </div>
+    <div id="desktop" class="showcase showcase-desktop">
+      <img src="./src/desktop-design.jpg">
+    </div>
+    <div id="tablet" class="showcase showcase-tablet">
+      <!--<img src="./src/tablet-design.png">-->
+    </div>
+    <button class="showcase__btn showcase__menuBtn" onclick="showOverlayMenu()">≡
+    </button>
+    <div id="overlayMenu" class="showcase__menu">
+      <button class="showcase__btn" onclick="showOverlayDesign('mobile')">✆</button>
+      <!--<button class="showcase__btn" onclick="showOverlayDesign('tablet')">📱</button>-->
+      <button class="showcase__btn" onclick="showOverlayDesign('desktop')">💻</button>
+      <form>
+        <label for="vis">Visibility:</label>
+        <input type="range" id="vis" class="showcase__vis" value="2" name="vis" min="0" max="5">
+      </form> 
+    </div>
+
+
+  </div>
+
+
+
+  <script src="./js/script.js"></script>
+  <script src="./js/overlay.js"></script>
+
+</body>
+
+</html>
